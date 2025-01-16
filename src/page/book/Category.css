@@ -1,0 +1,138 @@
+/* 主容器 */
+.main-container {
+  display: flex;
+  margin-top: 10px;
+  min-height: calc(100vh - 60px);
+}
+
+/* 左侧分类栏 */
+.sidebar {
+  position: fixed;
+  top: 75px;
+  left: 0;
+  width: 200px;
+  height: calc(100vh - 75px);
+  background-color: #f8f9fa;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  overflow-y: auto;
+  transition: left 0.3s;
+  z-index: 100;
+}
+
+/* 分类列表样式 */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 12px 15px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.sidebar li:hover:not(.active) {
+  background-color: #e9ecef;
+}
+
+.sidebar li.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* 右侧内容区域 */
+.content {
+  margin-left: 80px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* 子分类按钮容器 */
+.subcategories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* 子分类按钮样式 */
+.subcategory-btn {
+  padding: 8px 16px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #333;
+}
+
+.subcategory-btn:hover:not(.active) {
+  background-color: #e9ecef;
+}
+
+.subcategory-btn.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* 图书网格 */
+.books {
+  padding: 20px 0;
+}
+
+.book-cover {
+  width: 100%;
+  height: 200px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* 汉堡菜单按钮 */
+.hamburger {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 1001;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 响应式设计 */
+@media (max-width: 767px) {
+  .sidebar {
+    left: -200px;
+    top: 0;
+    height: 100vh;
+  }
+
+  .sidebar.active {
+    left: 0;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

@@ -1,0 +1,15 @@
+
+img {
+  outline: none; /* 去除轮廓 */
+  border: none;  /* 去除边框 */
+}
+
+.header-holder {
+  margin-bottom: 75px;
+}
+
+@media (max-width: 767px) {
+  .header-holder {
+    margin-bottom: 86px;
+  }
+}

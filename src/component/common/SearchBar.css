@@ -1,0 +1,58 @@
+.search-form {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 10px; /* 添加左右间距 */
+}
+
+
+.search-input {
+  flex: 1; /* 保证输入框能够适应父容器宽度 */
+  padding: 5px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  min-width: 40px; /* 给输入框一个最小宽度，防止缩得太小 */
+}
+
+.search-button {
+  background-color: #4caf50;
+  border: none;
+  padding: 5px 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #45a049;
+}
+
+.search-button svg {
+  fill: white;
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    max-width: 200px; /* 针对小屏幕的调整 */
+    margin: 0 5px;
+  }
+  .search-input {
+    flex: 1;
+    padding: 5px 10px;
+    font-size: 16px; /* 确保字体大小至少为 16px */
+    line-height: 1.5; /* 设置行高 */
+  }
+
+  .search-button {
+    padding: 5px 10px;
+  }
+}

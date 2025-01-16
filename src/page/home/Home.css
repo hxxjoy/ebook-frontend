@@ -1,0 +1,137 @@
+.home-page {
+    min-height: 100vh;
+  }
+
+  .browse-button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .browse-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* 特色书籍区域 */
+  .featured-section {
+    padding: 40px 20px;
+  }
+  
+  .featured-books {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  /* 分类网格 */
+  .categories-section {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  .category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .category-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .category-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  /* 最新上架区域 */
+  .latest-section {
+    padding: 40px 20px;
+  }
+  
+  .latest-books {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  /* 注册提示区域 */
+  .cta-section {
+    padding: 60px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: white;
+    color: #007bff;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #f8f9fa;
+  }
+  
+  /* 加载状态 */
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    font-size: 1.2rem;
+  }
+  
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .hero-section {
+      height: 300px;
+    }
+  
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+  
+    .featured-books,
+    .latest-books {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  
+    .categories-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-content h1 {
+      font-size: 1.5rem;
+    }
+  
+    .hero-content p {
+      font-size: 1rem;
+    }
+  }
